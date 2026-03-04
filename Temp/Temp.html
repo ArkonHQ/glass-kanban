@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/Temp/Temp.css">
+  <link rel="stylesheet" href="/Styles/Animation.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Boldonse&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Story+Script&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Dancing+Script:wght@700&family=Sacramento&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="columns">
+    <div class="addPlus">
+      <button class="plus-button" title=" New Card"></button>
+    </div>
+    <div class="newCard">
+      <div class="column">
+        <h2>To Do</h2>
+        <div class="card">
+          <div class="delBtn"><i class="fa-solid fa-circle-minus" style="color: rgb(76, 25, 25);"></i></div>
+          <div class="proirity"><i class="fa-solid fa-circle" style="color: rgb(99, 230, 190);"></i></div>
+          <div class="title"><input type="text" class="input-glass" placeholder="Title"></div>
+
+          <div class="dateParent"><input type="date" class="date">
+            <div class="date-picker-combo">
+              <!-- Quick presets -->
+              <div class="quick-presets">
+                <button class="preset-chip" data-days="0">Today</button>
+                <button class="preset-chip" data-days="1">Tomorrow</button>
+                <button class="preset-chip" data-days="7">Next week</button>
+              </div>
+
+              <!-- Split date inputs -->
+              <div class="date-group">
+                <select class="date-select month">
+                  <option value="">Month</option>
+                  <!-- Month options -->
+                </select>
+
+                <select class="date-select day">
+                  <option value="">Day</option>
+                  <!-- Day options -->
+                </select>
+
+                <select class="date-select year">
+                  <option value="">Year</option>
+                  <!-- Year options -->
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="radio-for-card">
+            <div class="status-radio-group">
+              <input type="radio" name="status" id="glass-done" />
+              <label for="glass-done">Done</label>
+
+              <input type="radio" name="status" id="glass-in-progress" checked="" />
+              <label for="glass-in-progress">Doing</label>
+
+              <input type="radio" name="status" id="glass-hold" />
+              <label for="glass-hold">Hold</label>
+
+              <div class="glass-glider"></div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="temp.js"></script>
+  </div>
+</body>
+
+</html>

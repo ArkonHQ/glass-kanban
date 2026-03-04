@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kanban-Project</title>
+  <link rel="stylesheet" href="Styles/Main.css">
+  <link rel="stylesheet" href="Styles/Animation.css">
+  <link rel="stylesheet" href="Styles/Cards.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Boldonse&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Story+Script&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Dancing+Script:wght@700&family=Sacramento&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <nav>
+    <div class="navbar">
+      <ul>
+        <h1 class="logo">Note</h1>
+        <li class="navlist" data-id="scrollDashboard">Dashboard</li>
+        <li class="navlist" data-id="scrollAdd">Add task</li>
+        <li class="navlist" data-id="scrollTasks">tasks</li>
+      </ul>
+    </div>
+
+  </nav>
+
+  <section>
+    <div class="intro">
+      <h1 class="handwriting-smooth ">Enhance your production by sign every task</h1>
+      <p>Organize all your tasks and make your days more production </p>
+      <p>Start now free only no ad nothing will bother you only you and your works</p>
+
+    </div>
+  </section>
+  <main>
+    <div class="addPlus">
+      <button class="plus-button" title=" New Card"></button>
+    </div>
+    <div class="newCard"><div class="newCard-real"></div></div>
+<div class="columns">
+    
+    <!-- ===== العمود الأول - DONE CARDS ===== -->
+    <div class="column column-done">
+        <h2 class="column-title">Done ✓</h2>
+        
+        <!-- Card 1 - Done -->
+        <div class="card">
+            <div class="cardsDone"></div>
+            <div class="delBtn"><button>🗑️</button></div>
+            <div class="priorityMark">
+                <p>High</p>
+            </div>
+            <div class="title">
+                <input type="text" class="input-glass" placeholder="Title">
+            </div>
+            <div class="dueDate">
+                <p>Due: Yesterday</p>
+            </div>
+            <div class="statusBtn"><button>✅ Done</button></div>
+        </div>
+    </div>
+    
+    <!-- ===== العمود الثاني - IN PROGRESS ===== -->
+    <div class="column column-progress">
+        <h2 class="column-title">In Progress 🔄</h2>
+        
+        <!-- Card 1 - In Progress -->
+        <div class="card">
+            <div class="cardsInProgress"></div>
+            <div class="delBtn"><button>🗑️</button></div>
+            <div class="priorityMark">
+                <p>High</p>
+            </div>
+            <div class="title">
+                <h3>Working on Feature A</h3>
+            </div>
+            <div class="dueDate">
+                <p>Due: Tomorrow</p>
+            </div>
+            <div class="statusBtn"><button>⏳ In Progress</button></div>
+        </div>
+    </div>
+    
+    <!-- ===== العمود الثالث - HOLD ===== -->
+    <div class="column column-hold">
+        <h2 class="column-title">On Hold ⏸️</h2>
+        
+        <!-- Card 1 - Hold -->
+        <div class="card">
+            <div class="cardsHold"></div>
+            <div class="delBtn"><button>🗑️</button></div>
+            <div class="priorityMark">
+                <p>Low</p>
+            </div>
+            <div class="title">
+                <h3>Task Blocked</h3>
+            </div>
+            <div class="dueDate">
+                <p>Due: Next week</p>
+            </div>
+            <div class="statusBtn"><button>⏸️ On Hold</button></div>
+        </div>
+    </div>
+    
+</div>
+  </main>
+  <script src="Main.js"></script>
+  <script src="Animation.js"></script>
+</body>
+
+</html>
