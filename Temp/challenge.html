@@ -1,36 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Story+Script&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="Temp.css">
-  <title>Document</title>
+  <link rel="stylesheet" href="/Styles/Cards.css">
+  <link rel="stylesheet" href="/Styles/readCard.css">
+  <title>Glass Task Manager</title>
 </head>
-
 <body>
-
- 
-    <div class="addPlus">
-      <button class="plus-button" title=" New Card"></button>
+  <!-- Modern SaaS Glass Header - Centered -->
+  <div class="app-header">
+    <div class="header-glass">
+      <!-- Search Box -->
+      <div class="search-box">
+        <i class="fa-solid fa-search"></i>
+        <input type="text" placeholder="Search tasks...">
+      </div>
+      
+      <!-- Divider -->
+      <div class="header-divider"></div>
+      
+      <!-- Filter & Sort Buttons -->
+      <div class="action-buttons">
+        <button class="header-btn filter-btn">
+          <i class="fa-solid fa-filter"></i>
+          <span>Filter</span>
+        </button>
+        <button class="header-btn sort-btn">
+          <i class="fa-solid fa-arrow-up-wide-short"></i>
+          <span>Sort</span>
+        </button>
+      </div>
+      
+      <!-- Add Task Button - Prominent -->
+      <button class="plus-button">
+        <i class="fa-solid fa-plus"></i>
+        <span>Add Task</span>
+      </button>
     </div>
-    <div class="columns"> 
-      <div class="theMiddleOfTheScreen"><div class="cardCenter"></div></div>
-
-      <div class="column-Done">
-        <h2>Done</h2>
-      </div>
-      <div class="column-in-Progress">
-        <h2>In progress</h2>
-      </div>
-      <div class="column-Hold">
-        <h2>Hold</h2>
-      </div>
-
   </div>
 
-  <script src="temp.js"></script>
-  <script src="Date.js"></script>
-</body>
+  <!-- Modal -->
+  <div class="theMiddleOfTheScreen">
+    <div class="cardCenter"></div>
+  </div>
 
+  <!-- Columns Container -->
+  <div class="columns">
+    <!-- Done Column -->
+    <div class="column-Done">
+      <div class="column-header">
+        <div class="header-left">
+          <i class="fa-regular fa-circle-check"></i>
+          <h2>Done</h2>
+        </div>
+        <div class="column-count-badge">
+          <span class="column-count">0</span>
+        </div>
+      </div>
+      
+      <div class="cards-container" id="done-cards">
+        <div class="card"></div>
+      </div>
+    </div>
+
+    <!-- In Progress Column -->
+    <div class="column-in-Progress">
+      <div class="column-header">
+        <div class="header-left">
+          <i class="fa-solid fa-spinner"></i>
+          <h2>In Progress</h2>
+        </div>
+        <div class="column-count-badge">
+          <span class="column-count">0</span>
+        </div>
+      </div>
+      
+      <div class="cards-container" id="progress-cards">
+                <div class="card"></div>
+      </div>
+    </div>
+
+    <!-- Hold Column -->
+    <div class="column-Hold">
+      <div class="column-header">
+        <div class="header-left">
+          <i class="fa-regular fa-pause-circle"></i>
+          <h2>Hold</h2>
+        </div>
+        <div class="column-count-badge">
+          <span class="column-count">0</span>
+        </div>
+      </div>
+      
+      <div class="cards-container" id="hold-cards">
+                <div class="card"></div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="/Temp/temp.js"></script>
+  <script src="/Temp/event.js"></script>
+</body>
 </html>

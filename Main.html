@@ -2,118 +2,52 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kanban-Project</title>
-  <link rel="stylesheet" href="Styles/Main.css">
-  <link rel="stylesheet" href="Styles/Animation.css">
-  <link rel="stylesheet" href="Styles/Cards.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Boldonse&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Story+Script&display=swap"
-    rel="stylesheet">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Dancing+Script:wght@700&family=Sacramento&display=swap"
-    rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles/Cards.css">
+    <title>read card – single priority & status chips</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
 
-  <nav>
-    <div class="navbar">
-      <ul>
-        <h1 class="logo">Note</h1>
-        <li class="navlist" data-id="scrollDashboard">Dashboard</li>
-        <li class="navlist" data-id="scrollAdd">Add task</li>
-        <li class="navlist" data-id="scrollTasks">tasks</li>
-      </ul>
-    </div>
+    <div class="card" data-priority="low">
 
-  </nav>
 
-  <section>
-    <div class="intro">
-      <h1 class="handwriting-smooth ">Enhance your production by sign every task</h1>
-      <p>Organize all your tasks and make your days more production </p>
-      <p>Start now free only no ad nothing will bother you only you and your works</p>
+        <div class="drag-handle" title="drag to reorder">
+            <i class="fa-solid fa-grip-lines"></i>
+        </div>
 
-    </div>
-  </section>
-  <main>
-    <div class="addPlus">
-      <button class="plus-button" title=" New Card"></button>
-    </div>
-    <div class="newCard"><div class="newCard-real"></div></div>
-<div class="columns">
-    
-    <!-- ===== العمود الأول - DONE CARDS ===== -->
-    <div class="column column-done">
-        <h2 class="column-title">Done ✓</h2>
-        
-        <!-- Card 1 - Done -->
-        <div class="card">
-            <div class="cardsDone"></div>
-            <div class="delBtn"><button>🗑️</button></div>
-            <div class="priorityMark">
-                <p>High</p>
+
+        <div class="options-btn" title="options">
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+        </div>
+
+
+        <div class="delBtn" title="delete">
+            <i class="fa-regular fa-circle-xmark"></i>
+        </div>
+
+
+        <div class="chip-row">
+            <div class="chip priority-chip">
+                <i class="fa-solid fa-circle" style="color: var(--low-color);"></i>
+                <span>Low</span>
             </div>
-            <div class="title">
-                <input type="text" class="input-glass" placeholder="Title">
+            <div class="chip status-chip" data-status="doing">
+                <i class="fa-regular fa-clock"></i>
+                <span>Doing</span>
             </div>
-            <div class="dueDate">
-                <p>Due: Yesterday</p>
-            </div>
-            <div class="statusBtn"><button>✅ Done</button></div>
+        </div>
+        <div class="title-display">
+            Design new user flow · finalise mockups and present to stakeholders by Friday
+        </div>
+        <div class="due-info">
+            <i class="fa-regular fa-calendar"></i>
+            <span class="due-date">25 MAR 2026</span>
+            <span class="remaining">3 days left</span>
         </div>
     </div>
-    
-    <!-- ===== العمود الثاني - IN PROGRESS ===== -->
-    <div class="column column-progress">
-        <h2 class="column-title">In Progress 🔄</h2>
-        
-        <!-- Card 1 - In Progress -->
-        <div class="card">
-            <div class="cardsInProgress"></div>
-            <div class="delBtn"><button>🗑️</button></div>
-            <div class="priorityMark">
-                <p>High</p>
-            </div>
-            <div class="title">
-                <h3>Working on Feature A</h3>
-            </div>
-            <div class="dueDate">
-                <p>Due: Tomorrow</p>
-            </div>
-            <div class="statusBtn"><button>⏳ In Progress</button></div>
-        </div>
-    </div>
-    
-    <!-- ===== العمود الثالث - HOLD ===== -->
-    <div class="column column-hold">
-        <h2 class="column-title">On Hold ⏸️</h2>
-        
-        <!-- Card 1 - Hold -->
-        <div class="card">
-            <div class="cardsHold"></div>
-            <div class="delBtn"><button>🗑️</button></div>
-            <div class="priorityMark">
-                <p>Low</p>
-            </div>
-            <div class="title">
-                <h3>Task Blocked</h3>
-            </div>
-            <div class="dueDate">
-                <p>Due: Next week</p>
-            </div>
-            <div class="statusBtn"><button>⏸️ On Hold</button></div>
-        </div>
-    </div>
-    
-</div>
-  </main>
-  <script src="Main.js"></script>
-  <script src="Animation.js"></script>
 </body>
 
 </html>
